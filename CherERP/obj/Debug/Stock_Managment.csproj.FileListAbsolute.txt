@@ -1,0 +1,2 @@
+B:\BKP2\__ext 3\STM\STM_13\STM_2017_15\Stock_Managment\bin\x86\Debug\Stosa.exe.config
+B:\BKP2\__ext 3\STM\STM_13\STM_2017_15\Stock_Managment\obj\Debug\Stock_Managment.csproj.ResolveComReference.cache

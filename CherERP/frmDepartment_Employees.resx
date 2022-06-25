@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="storeIDLabel.GenerateMember" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="officeTelLabel.GenerateMember" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="employeesBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>500, 56</value>
+  </metadata>
+  <metadata name="dsEmployees.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>377, 56</value>
+  </metadata>
+  <metadata name="iStoreListBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 56</value>
+  </metadata>
+  <metadata name="departmentLstBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>592, 17</value>
+  </metadata>
+  <metadata name="belayAbItemRequistions.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>409, 17</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="imgPhoto.InitialImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        /9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwg
+        JC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIy
+        MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCABzAHUDASIAAhEBAxEB/8QA
+        HwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIh
+        MUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVW
+        V1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXG
+        x8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQF
+        BgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAV
+        YnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOE
+        hYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq
+        8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKA
+        CiiigArH8SeKdG8I6dHf65efZLWSUQq/lPJlyCQMICein8q2K8f/AGjv+Seaf/2FY/8A0VLQB6ppWq2O
+        uaXb6nplzHc2dwm+KVOjD+YIOQQeQQQcEVl6V428O634hvdA07UPO1Ox8z7RB5Mi7NjhG+YqFOGIHBNe
+        OfBPXZvB+tnwlrkscFvrFvBqOnSNlUeSVFIVSVG4spC9cBoioyTT/hZ/ycL41/7fv/StKAPoCivI/EPx
+        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
+</value>
+  </data>
+  <metadata name="openDlg.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="sqlSelectCommand1.DesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="sqlSelectCommand1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 0</value>
+  </metadata>
+  <metadata name="sqlSelectCommand1.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="sqlInsertCommand1.DesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="sqlInsertCommand1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 0</value>
+  </metadata>
+  <metadata name="sqlInsertCommand1.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="sqlInsertCommand1.CommandText" xml:space="preserve">
+    <value>INSERT INTO [Employees] ([EmployeeId], [EmployeeName], [DepartmentId], [Woreda], [Kebele], [OfficeTel], [Photo]) VALUES (@EmployeeId, @EmployeeName, @DepartmentId, @Woreda, @Kebele, @OfficeTel, @Photo);
+SELECT EmployeeId, EmployeeName, DepartmentId, Woreda, Kebele, OfficeTel, Photo FROM Employees WHERE (EmployeeId = @EmployeeId) ORDER BY EmployeeName</value>
+  </data>
+  <metadata name="sqlUpdateCommand1.DesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="sqlUpdateCommand1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 0</value>
+  </metadata>
+  <metadata name="sqlUpdateCommand1.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="sqlUpdateCommand1.CommandText" xml:space="preserve">
+    <value>UPDATE [Employees] SET [EmployeeId] = @EmployeeId, [EmployeeName] = @EmployeeName, [DepartmentId] = @DepartmentId, [Woreda] = @Woreda, [Kebele] = @Kebele, [OfficeTel] = @OfficeTel, [Photo] = @Photo WHERE (([EmployeeId] = @Original_EmployeeId) AND ((@IsNull_EmployeeName = 1 AND [EmployeeName] IS NULL) OR ([EmployeeName] = @Original_EmployeeName)) AND ((@IsNull_DepartmentId = 1 AND [DepartmentId] IS NULL) OR ([DepartmentId] = @Original_DepartmentId)) AND ((@IsNull_Woreda = 1 AND [Woreda] IS NULL) OR ([Woreda] = @Original_Woreda)) AND ((@IsNull_Kebele = 1 AND [Kebele] IS NULL) OR ([Kebele] = @Original_Kebele)) AND ((@IsNull_OfficeTel = 1 AND [OfficeTel] IS NULL) OR ([OfficeTel] = @Original_OfficeTel)));
+SELECT EmployeeId, EmployeeName, DepartmentId, Woreda, Kebele, OfficeTel, Photo FROM Employees WHERE (EmployeeId = @EmployeeId) ORDER BY EmployeeName</value>
+  </data>
+  <metadata name="sqlDeleteCommand1.DesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="sqlDeleteCommand1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 0</value>
+  </metadata>
+  <metadata name="sqlDeleteCommand1.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="sqlDeleteCommand1.CommandText" xml:space="preserve">
+    <value>DELETE FROM [Employees] WHERE (([EmployeeId] = @Original_EmployeeId) AND ((@IsNull_EmployeeName = 1 AND [EmployeeName] IS NULL) OR ([EmployeeName] = @Original_EmployeeName)) AND ((@IsNull_DepartmentId = 1 AND [DepartmentId] IS NULL) OR ([DepartmentId] = @Original_DepartmentId)) AND ((@IsNull_Woreda = 1 AND [Woreda] IS NULL) OR ([Woreda] = @Original_Woreda)) AND ((@IsNull_Kebele = 1 AND [Kebele] IS NULL) OR ([Kebele] = @Original_Kebele)) AND ((@IsNull_OfficeTel = 1 AND [OfficeTel] IS NULL) OR ([OfficeTel] = @Original_OfficeTel)))</value>
+  </data>
+  <metadata name="daSql.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>327, 17</value>
+  </metadata>
+  <metadata name="departmentLstTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>802, 17</value>
+  </metadata>
+  <metadata name="i_StoreListTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>197, 56</value>
+  </metadata>
+  <metadata name="employeesTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>689, 56</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>110</value>
+  </metadata>
+</root>

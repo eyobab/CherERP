@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="BelayAbSSItemHistory" targetNamespace="http://tempuri.org/BelayAbSSItemHistory.xsd" xmlns:mstns="http://tempuri.org/BelayAbSSItemHistory.xsd" xmlns="http://tempuri.org/BelayAbSSItemHistory.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="StosaConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="StosaConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Belayab.Properties.Settings.GlobalReference.Default.StosaConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="rev_InvoiceHistoryTableAdapter" GeneratorDataComponentClassName="rev_InvoiceHistoryTableAdapter" Name="rev_InvoiceHistory" UserDataComponentName="rev_InvoiceHistoryTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="StosaConnectionString (Settings)" DbObjectName="BelayAbSS.dbo.rev_InvoiceHistory" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT InvoiceNo, [Pay Type], InvoiceDate, PartNumber, Qty, UnitPrice, CustomerName, EmployeeName FROM dbo.rev_InvoiceHistory</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="InvoiceNo" DataSetColumn="InvoiceNo" />
+              <Mapping SourceColumn="Pay Type" DataSetColumn="Pay Type" />
+              <Mapping SourceColumn="InvoiceDate" DataSetColumn="InvoiceDate" />
+              <Mapping SourceColumn="PartNumber" DataSetColumn="PartNumber" />
+              <Mapping SourceColumn="Qty" DataSetColumn="Qty" />
+              <Mapping SourceColumn="UnitPrice" DataSetColumn="UnitPrice" />
+              <Mapping SourceColumn="CustomerName" DataSetColumn="CustomerName" />
+              <Mapping SourceColumn="EmployeeName" DataSetColumn="EmployeeName" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="rev_IssuedHistoryTableAdapter" GeneratorDataComponentClassName="rev_IssuedHistoryTableAdapter" Name="rev_IssuedHistory" UserDataComponentName="rev_IssuedHistoryTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="StosaConnectionString (Settings)" DbObjectName="BelayAbSS.dbo.rev_IssuedHistory" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT IssueNo, IssueDate, Units, RequestedQty, IssuedQty, UnitPrice, ReferenceNumber, EmployeeName, PartNumber FROM dbo.rev_IssuedHistory</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="IssueNo" DataSetColumn="IssueNo" />
+              <Mapping SourceColumn="IssueDate" DataSetColumn="IssueDate" />
+              <Mapping SourceColumn="Units" DataSetColumn="Units" />
+              <Mapping SourceColumn="RequestedQty" DataSetColumn="RequestedQty" />
+              <Mapping SourceColumn="IssuedQty" DataSetColumn="IssuedQty" />
+              <Mapping SourceColumn="UnitPrice" DataSetColumn="UnitPrice" />
+              <Mapping SourceColumn="ReferenceNumber" DataSetColumn="ReferenceNumber" />
+              <Mapping SourceColumn="EmployeeName" DataSetColumn="EmployeeName" />
+              <Mapping SourceColumn="PartNumber" DataSetColumn="PartNumber" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="rev_ItemListTableAdapter" GeneratorDataComponentClassName="rev_ItemListTableAdapter" Name="rev_ItemList" UserDataComponentName="rev_ItemListTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="StosaConnectionString (Settings)" DbObjectName="BelayAbSS.dbo.rev_ItemList" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT PartNumber, Description, CategoryName, [Vehicle Type] FROM dbo.rev_ItemList</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="PartNumber" DataSetColumn="PartNumber" />
+              <Mapping SourceColumn="Description" DataSetColumn="Description" />
+              <Mapping SourceColumn="CategoryName" DataSetColumn="CategoryName" />
+              <Mapping SourceColumn="Vehicle Type" DataSetColumn="Vehicle Type" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="rev_ReceivedHistoryTableAdapter" GeneratorDataComponentClassName="rev_ReceivedHistoryTableAdapter" Name="rev_ReceivedHistory" UserDataComponentName="rev_ReceivedHistoryTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="StosaConnectionString (Settings)" DbObjectName="BelayAbSS.dbo.rev_ReceivedHistory" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ReceivedNumber, ReceivedDate, Quantity, UnitCost, SupplierName, EmployeeName, PartNumber FROM dbo.rev_ReceivedHistory</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ReceivedNumber" DataSetColumn="ReceivedNumber" />
+              <Mapping SourceColumn="ReceivedDate" DataSetColumn="ReceivedDate" />
+              <Mapping SourceColumn="Quantity" DataSetColumn="Quantity" />
+              <Mapping SourceColumn="UnitCost" DataSetColumn="UnitCost" />
+              <Mapping SourceColumn="SupplierName" DataSetColumn="SupplierName" />
+              <Mapping SourceColumn="EmployeeName" DataSetColumn="EmployeeName" />
+              <Mapping SourceColumn="PartNumber" DataSetColumn="PartNumber" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="BelayAbSSItemHistory" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="BelayAbSSItemHistory" msprop:Generator_DataSetName="BelayAbSSItemHistory">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="rev_InvoiceHistory" msprop:Generator_UserTableName="rev_InvoiceHistory" msprop:Generator_RowDeletedName="rev_InvoiceHistoryRowDeleted" msprop:Generator_RowChangedName="rev_InvoiceHistoryRowChanged" msprop:Generator_RowClassName="rev_InvoiceHistoryRow" msprop:Generator_RowChangingName="rev_InvoiceHistoryRowChanging" msprop:Generator_RowEvArgName="rev_InvoiceHistoryRowChangeEvent" msprop:Generator_RowEvHandlerName="rev_InvoiceHistoryRowChangeEventHandler" msprop:Generator_TableClassName="rev_InvoiceHistoryDataTable" msprop:Generator_TableVarName="tablerev_InvoiceHistory" msprop:Generator_RowDeletingName="rev_InvoiceHistoryRowDeleting" msprop:Generator_TablePropName="rev_InvoiceHistory">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="InvoiceNo" msprop:Generator_UserColumnName="InvoiceNo" msprop:Generator_ColumnPropNameInRow="InvoiceNo" msprop:Generator_ColumnVarNameInTable="columnInvoiceNo" msprop:Generator_ColumnPropNameInTable="InvoiceNoColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Pay_x0020_Type" msprop:Generator_UserColumnName="Pay Type" msprop:Generator_ColumnPropNameInRow="Pay_Type" msprop:Generator_ColumnVarNameInTable="columnPay_Type" msprop:Generator_ColumnPropNameInTable="Pay_TypeColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InvoiceDate" msprop:Generator_UserColumnName="InvoiceDate" msprop:Generator_ColumnPropNameInRow="InvoiceDate" msprop:Generator_ColumnVarNameInTable="columnInvoiceDate" msprop:Generator_ColumnPropNameInTable="InvoiceDateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="PartNumber" msprop:Generator_UserColumnName="PartNumber" msprop:Generator_ColumnPropNameInRow="PartNumber" msprop:Generator_ColumnVarNameInTable="columnPartNumber" msprop:Generator_ColumnPropNameInTable="PartNumberColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Qty" msprop:Generator_UserColumnName="Qty" msprop:Generator_ColumnPropNameInRow="Qty" msprop:Generator_ColumnVarNameInTable="columnQty" msprop:Generator_ColumnPropNameInTable="QtyColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="UnitPrice" msprop:Generator_UserColumnName="UnitPrice" msprop:Generator_ColumnPropNameInRow="UnitPrice" msprop:Generator_ColumnVarNameInTable="columnUnitPrice" msprop:Generator_ColumnPropNameInTable="UnitPriceColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="CustomerName" msprop:Generator_UserColumnName="CustomerName" msprop:Generator_ColumnPropNameInRow="CustomerName" msprop:Generator_ColumnVarNameInTable="columnCustomerName" msprop:Generator_ColumnPropNameInTable="CustomerNameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EmployeeName" msprop:Generator_UserColumnName="EmployeeName" msprop:Generator_ColumnPropNameInRow="EmployeeName" msprop:Generator_ColumnVarNameInTable="columnEmployeeName" msprop:Generator_ColumnPropNameInTable="EmployeeNameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="rev_IssuedHistory" msprop:Generator_UserTableName="rev_IssuedHistory" msprop:Generator_RowDeletedName="rev_IssuedHistoryRowDeleted" msprop:Generator_RowChangedName="rev_IssuedHistoryRowChanged" msprop:Generator_RowClassName="rev_IssuedHistoryRow" msprop:Generator_RowChangingName="rev_IssuedHistoryRowChanging" msprop:Generator_RowEvArgName="rev_IssuedHistoryRowChangeEvent" msprop:Generator_RowEvHandlerName="rev_IssuedHistoryRowChangeEventHandler" msprop:Generator_TableClassName="rev_IssuedHistoryDataTable" msprop:Generator_TableVarName="tablerev_IssuedHistory" msprop:Generator_RowDeletingName="rev_IssuedHistoryRowDeleting" msprop:Generator_TablePropName="rev_IssuedHistory">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IssueNo" msprop:Generator_UserColumnName="IssueNo" msprop:Generator_ColumnPropNameInRow="IssueNo" msprop:Generator_ColumnVarNameInTable="columnIssueNo" msprop:Generator_ColumnPropNameInTable="IssueNoColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IssueDate" msprop:Generator_UserColumnName="IssueDate" msprop:Generator_ColumnPropNameInRow="IssueDate" msprop:Generator_ColumnVarNameInTable="columnIssueDate" msprop:Generator_ColumnPropNameInTable="IssueDateColumn" type="xs:dateTime" />
+              <xs:element name="Units" msprop:Generator_UserColumnName="Units" msprop:Generator_ColumnPropNameInRow="Units" msprop:Generator_ColumnVarNameInTable="columnUnits" msprop:Generator_ColumnPropNameInTable="UnitsColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RequestedQty" msprop:Generator_UserColumnName="RequestedQty" msprop:Generator_ColumnPropNameInRow="RequestedQty" msprop:Generator_ColumnVarNameInTable="columnRequestedQty" msprop:Generator_ColumnPropNameInTable="RequestedQtyColumn" type="xs:short" minOccurs="0" />
+              <xs:element name="IssuedQty" msprop:Generator_UserColumnName="IssuedQty" msprop:Generator_ColumnPropNameInRow="IssuedQty" msprop:Generator_ColumnVarNameInTable="columnIssuedQty" msprop:Generator_ColumnPropNameInTable="IssuedQtyColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="UnitPrice" msprop:Generator_UserColumnName="UnitPrice" msprop:Generator_ColumnPropNameInRow="UnitPrice" msprop:Generator_ColumnVarNameInTable="columnUnitPrice" msprop:Generator_ColumnPropNameInTable="UnitPriceColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="ReferenceNumber" msprop:Generator_UserColumnName="ReferenceNumber" msprop:Generator_ColumnPropNameInRow="ReferenceNumber" msprop:Generator_ColumnVarNameInTable="columnReferenceNumber" msprop:Generator_ColumnPropNameInTable="ReferenceNumberColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EmployeeName" msprop:Generator_UserColumnName="EmployeeName" msprop:Generator_ColumnPropNameInRow="EmployeeName" msprop:Generator_ColumnVarNameInTable="columnEmployeeName" msprop:Generator_ColumnPropNameInTable="EmployeeNameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PartNumber" msprop:Generator_UserColumnName="PartNumber" msprop:Generator_ColumnPropNameInRow="PartNumber" msprop:Generator_ColumnVarNameInTable="columnPartNumber" msprop:Generator_ColumnPropNameInTable="PartNumberColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="rev_ItemList" msprop:Generator_UserTableName="rev_ItemList" msprop:Generator_RowDeletedName="rev_ItemListRowDeleted" msprop:Generator_RowChangedName="rev_ItemListRowChanged" msprop:Generator_RowClassName="rev_ItemListRow" msprop:Generator_RowChangingName="rev_ItemListRowChanging" msprop:Generator_RowEvArgName="rev_ItemListRowChangeEvent" msprop:Generator_RowEvHandlerName="rev_ItemListRowChangeEventHandler" msprop:Generator_TableClassName="rev_ItemListDataTable" msprop:Generator_TableVarName="tablerev_ItemList" msprop:Generator_RowDeletingName="rev_ItemListRowDeleting" msprop:Generator_TablePropName="rev_ItemList">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PartNumber" msprop:Generator_UserColumnName="PartNumber" msprop:Generator_ColumnPropNameInRow="PartNumber" msprop:Generator_ColumnVarNameInTable="columnPartNumber" msprop:Generator_ColumnPropNameInTable="PartNumberColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Description" msprop:Generator_UserColumnName="Description" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="300" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CategoryName" msprop:Generator_UserColumnName="CategoryName" msprop:Generator_ColumnPropNameInRow="CategoryName" msprop:Generator_ColumnVarNameInTable="columnCategoryName" msprop:Generator_ColumnPropNameInTable="CategoryNameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Vehicle_x0020_Type" msprop:Generator_UserColumnName="Vehicle Type" msprop:Generator_ColumnPropNameInRow="Vehicle_Type" msprop:Generator_ColumnVarNameInTable="columnVehicle_Type" msprop:Generator_ColumnPropNameInTable="Vehicle_TypeColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="rev_ReceivedHistory" msprop:Generator_UserTableName="rev_ReceivedHistory" msprop:Generator_RowDeletedName="rev_ReceivedHistoryRowDeleted" msprop:Generator_RowChangedName="rev_ReceivedHistoryRowChanged" msprop:Generator_RowClassName="rev_ReceivedHistoryRow" msprop:Generator_RowChangingName="rev_ReceivedHistoryRowChanging" msprop:Generator_RowEvArgName="rev_ReceivedHistoryRowChangeEvent" msprop:Generator_RowEvHandlerName="rev_ReceivedHistoryRowChangeEventHandler" msprop:Generator_TableClassName="rev_ReceivedHistoryDataTable" msprop:Generator_TableVarName="tablerev_ReceivedHistory" msprop:Generator_RowDeletingName="rev_ReceivedHistoryRowDeleting" msprop:Generator_TablePropName="rev_ReceivedHistory">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ReceivedNumber" msprop:Generator_UserColumnName="ReceivedNumber" msprop:Generator_ColumnVarNameInTable="columnReceivedNumber" msprop:Generator_ColumnPropNameInRow="ReceivedNumber" msprop:Generator_ColumnPropNameInTable="ReceivedNumberColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ReceivedDate" msprop:Generator_UserColumnName="ReceivedDate" msprop:Generator_ColumnVarNameInTable="columnReceivedDate" msprop:Generator_ColumnPropNameInRow="ReceivedDate" msprop:Generator_ColumnPropNameInTable="ReceivedDateColumn" type="xs:dateTime" />
+              <xs:element name="Quantity" msprop:Generator_UserColumnName="Quantity" msprop:Generator_ColumnVarNameInTable="columnQuantity" msprop:Generator_ColumnPropNameInRow="Quantity" msprop:Generator_ColumnPropNameInTable="QuantityColumn" type="xs:short" minOccurs="0" />
+              <xs:element name="UnitCost" msprop:Generator_UserColumnName="UnitCost" msprop:Generator_ColumnVarNameInTable="columnUnitCost" msprop:Generator_ColumnPropNameInRow="UnitCost" msprop:Generator_ColumnPropNameInTable="UnitCostColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SupplierName" msprop:Generator_UserColumnName="SupplierName" msprop:Generator_ColumnVarNameInTable="columnSupplierName" msprop:Generator_ColumnPropNameInRow="SupplierName" msprop:Generator_ColumnPropNameInTable="SupplierNameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EmployeeName" msprop:Generator_UserColumnName="EmployeeName" msprop:Generator_ColumnVarNameInTable="columnEmployeeName" msprop:Generator_ColumnPropNameInRow="EmployeeName" msprop:Generator_ColumnPropNameInTable="EmployeeNameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PartNumber" msprop:Generator_UserColumnName="PartNumber" msprop:Generator_ColumnVarNameInTable="columnPartNumber" msprop:Generator_ColumnPropNameInRow="PartNumber" msprop:Generator_ColumnPropNameInTable="PartNumberColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:rev_ItemList" />
+      <xs:field xpath="mstns:PartNumber" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="rev_ItemList_rev_InvoiceHistory" msdata:parent="rev_ItemList" msdata:child="rev_InvoiceHistory" msdata:parentkey="PartNumber" msdata:childkey="PartNumber" msprop:Generator_UserRelationName="rev_ItemList_rev_InvoiceHistory" msprop:Generator_RelationVarName="relationrev_ItemList_rev_InvoiceHistory" msprop:Generator_UserChildTable="rev_InvoiceHistory" msprop:Generator_UserParentTable="rev_ItemList" msprop:Generator_ParentPropName="rev_ItemListRow" msprop:Generator_ChildPropName="Getrev_InvoiceHistoryRows" />
+      <msdata:Relationship name="rev_ItemList_rev_IssuedHistory" msdata:parent="rev_ItemList" msdata:child="rev_IssuedHistory" msdata:parentkey="PartNumber" msdata:childkey="PartNumber" msprop:Generator_UserRelationName="rev_ItemList_rev_IssuedHistory" msprop:Generator_RelationVarName="relationrev_ItemList_rev_IssuedHistory" msprop:Generator_UserChildTable="rev_IssuedHistory" msprop:Generator_UserParentTable="rev_ItemList" msprop:Generator_ParentPropName="rev_ItemListRow" msprop:Generator_ChildPropName="Getrev_IssuedHistoryRows" />
+      <msdata:Relationship name="rev_ItemList_rev_ReceivedHistory" msdata:parent="rev_ItemList" msdata:child="rev_ReceivedHistory" msdata:parentkey="PartNumber" msdata:childkey="PartNumber" msprop:Generator_UserRelationName="rev_ItemList_rev_ReceivedHistory" msprop:Generator_RelationVarName="relationrev_ItemList_rev_ReceivedHistory" msprop:Generator_UserChildTable="rev_ReceivedHistory" msprop:Generator_UserParentTable="rev_ItemList" msprop:Generator_ParentPropName="rev_ItemListRow" msprop:Generator_ChildPropName="Getrev_ReceivedHistoryRows" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

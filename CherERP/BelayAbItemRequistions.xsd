@@ -1,0 +1,532 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="BelayAbItemRequistions" targetNamespace="http://tempuri.org/BelayAbItemRequistions.xsd" xmlns:mstns="http://tempuri.org/BelayAbItemRequistions.xsd" xmlns="http://tempuri.org/BelayAbItemRequistions.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="StosaConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="StosaConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Belayab.Properties.Settings.GlobalReference.Default.StosaConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DepartmentLstTableAdapter" GeneratorDataComponentClassName="DepartmentLstTableAdapter" Name="DepartmentLst" UserDataComponentName="DepartmentLstTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="StosaConnectionString (Settings)" DbObjectName="BelayAbSS.dbo.DepartmentLst" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT DepartmentId, DepartmentName FROM dbo.DepartmentLst</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="DepartmentId" DataSetColumn="DepartmentId" />
+              <Mapping SourceColumn="DepartmentName" DataSetColumn="DepartmentName" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="EmployeesLstTableAdapter" GeneratorDataComponentClassName="EmployeesLstTableAdapter" Name="EmployeesLst" UserDataComponentName="EmployeesLstTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="StosaConnectionString (Settings)" DbObjectName="BelayAbSS.dbo.EmployeesLst" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT EmployeeId, DepartmentId, EmployeeName FROM dbo.EmployeesLst</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="EmployeeId" DataSetColumn="EmployeeId" />
+              <Mapping SourceColumn="DepartmentId" DataSetColumn="DepartmentId" />
+              <Mapping SourceColumn="EmployeeName" DataSetColumn="EmployeeName" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ItemRequisitionTableAdapter" GeneratorDataComponentClassName="ItemRequisitionTableAdapter" Name="ItemRequisition" UserDataComponentName="ItemRequisitionTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="StosaConnectionString (Settings)" DbObjectName="SysBab.dbo.ItemRequisition" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByTrReqSent" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataTrReqSent" GeneratorSourceName="FillByTrReqSent" GetMethodModifier="Public" GetMethodName="GetDataTrReqSent" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataTrReqSent" UserSourceName="FillByTrReqSent">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [ItemRequisition] WHERE (([RequisitionNumber] = @Original_RequisitionNumber) AND ((@IsNull_DepartmentId = 1 AND [DepartmentId] IS NULL) OR ([DepartmentId] = @Original_DepartmentId)) AND ((@IsNull_RequestTo = 1 AND [RequestTo] IS NULL) OR ([RequestTo] = @Original_RequestTo)) AND ((@IsNull_RequestedBy = 1 AND [RequestedBy] IS NULL) OR ([RequestedBy] = @Original_RequestedBy)) AND ((@IsNull_ApprovedBy = 1 AND [ApprovedBy] IS NULL) OR ([ApprovedBy] = @Original_ApprovedBy)) AND ((@IsNull_RequistionDate = 1 AND [RequistionDate] IS NULL) OR ([RequistionDate] = @Original_RequistionDate)) AND ((@IsNull_CreatedBy = 1 AND [CreatedBy] IS NULL) OR ([CreatedBy] = @Original_CreatedBy)) AND ((@IsNull_UpdatedBy = 1 AND [UpdatedBy] IS NULL) OR ([UpdatedBy] = @Original_UpdatedBy)) AND ((@IsNull_Status = 1 AND [Status] IS NULL) OR ([Status] = @Original_Status)) AND ((@IsNull_Remarks = 1 AND [Remarks] IS NULL) OR ([Remarks] = @Original_Remarks)) AND ((@IsNull_RequestedFor = 1 AND [RequestedFor] IS NULL) OR ([RequestedFor] = @Original_RequestedFor)) AND ((@IsNull_Reference = 1 AND [Reference] IS NULL) OR ([Reference] = @Original_Reference)) AND ((@IsNull_StoreID = 1 AND [StoreID] IS NULL) OR ([StoreID] = @Original_StoreID)) AND ((@IsNull_RequisitionType = 1 AND [RequisitionType] IS NULL) OR ([RequisitionType] = @Original_RequisitionType)) AND ((@IsNull_FromStore = 1 AND [FromStore] IS NULL) OR ([FromStore] = @Original_FromStore)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_RequisitionNumber" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="RequisitionNumber" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DepartmentId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DepartmentId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Original_DepartmentId" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="DepartmentId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_RequestTo" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="RequestTo" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_RequestTo" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="RequestTo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_RequestedBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="RequestedBy" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Original_RequestedBy" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="RequestedBy" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ApprovedBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ApprovedBy" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Original_ApprovedBy" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="ApprovedBy" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_RequistionDate" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="RequistionDate" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_RequistionDate" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="RequistionDate" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_CreatedBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CreatedBy" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_CreatedBy" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="CreatedBy" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_UpdatedBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="UpdatedBy" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_UpdatedBy" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="UpdatedBy" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Status" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Status" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Status" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Status" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Remarks" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Remarks" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_Remarks" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Remarks" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_RequestedFor" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="RequestedFor" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_RequestedFor" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="RequestedFor" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Reference" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Reference" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Reference" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Reference" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_StoreID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="StoreID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_StoreID" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="StoreID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_RequisitionType" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="RequisitionType" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_RequisitionType" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="RequisitionType" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_FromStore" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="FromStore" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_FromStore" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="FromStore" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [ItemRequisition] ([RequisitionNumber], [DepartmentId], [RequestTo], [RequestedBy], [ApprovedBy], [RequistionDate], [CreatedBy], [UpdatedBy], [Status], [Remarks], [RequestedFor], [Reference], [StoreID], [RequisitionType], [FromStore]) VALUES (@RequisitionNumber, @DepartmentId, @RequestTo, @RequestedBy, @ApprovedBy, @RequistionDate, @CreatedBy, @UpdatedBy, @Status, @Remarks, @RequestedFor, @Reference, @StoreID, @RequisitionType, @FromStore)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@RequisitionNumber" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="RequisitionNumber" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@DepartmentId" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="DepartmentId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@RequestTo" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="RequestTo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@RequestedBy" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="RequestedBy" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@ApprovedBy" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="ApprovedBy" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@RequistionDate" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="RequistionDate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@CreatedBy" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="CreatedBy" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@UpdatedBy" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="UpdatedBy" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Status" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Status" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Remarks" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Remarks" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@RequestedFor" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="RequestedFor" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Reference" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Reference" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@StoreID" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="StoreID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@RequisitionType" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="RequisitionType" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@FromStore" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="FromStore" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        RequisitionNumber, DepartmentId, RequestTo, RequestedBy, ApprovedBy, RequistionDate, CreatedBy, UpdatedBy, Status, Remarks, RequestedFor, Reference, StoreID, RequisitionType, FromStore
+FROM            ItemRequisition
+WHERE        (FromStore &lt;&gt; @StoreID) AND (RequisitionType = 'TR') AND (StoreID = @StoreID) AND (RequisitionNumber IN
+                             (SELECT        ItemRequisition_1.RequisitionNumber
+                               FROM            ItemRequisition AS ItemRequisition_1 LEFT OUTER JOIN
+                                                         StoreTransfer ON StoreTransfer.ReferenceNumber = ItemRequisition_1.RequisitionNumber
+                               WHERE        (StoreTransfer.ReferenceNumber IS NULL) OR
+                                                         (ItemRequisition.FromStore &lt;&gt; @StoreID) AND (ItemRequisition_1.RequisitionType = 'TR') AND (ItemRequisition_1.StoreID = @StoreID) AND (StoreTransfer.Status &lt;&gt; 'Received')))
+ORDER BY RequistionDate DESC</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="StoreID" ColumnName="FromStore" DataSourceName="SysBab.dbo.ItemRequisition" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@StoreID" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="FromStore" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [ItemRequisition] SET [RequisitionNumber] = @RequisitionNumber, [DepartmentId] = @DepartmentId, [RequestTo] = @RequestTo, [RequestedBy] = @RequestedBy, [ApprovedBy] = @ApprovedBy, [RequistionDate] = @RequistionDate, [CreatedBy] = @CreatedBy, [UpdatedBy] = @UpdatedBy, [Status] = @Status, [Remarks] = @Remarks, [RequestedFor] = @RequestedFor, [Reference] = @Reference, [StoreID] = @StoreID, [RequisitionType] = @RequisitionType, [FromStore] = @FromStore WHERE (([RequisitionNumber] = @Original_RequisitionNumber) AND ((@IsNull_DepartmentId = 1 AND [DepartmentId] IS NULL) OR ([DepartmentId] = @Original_DepartmentId)) AND ((@IsNull_RequestTo = 1 AND [RequestTo] IS NULL) OR ([RequestTo] = @Original_RequestTo)) AND ((@IsNull_RequestedBy = 1 AND [RequestedBy] IS NULL) OR ([RequestedBy] = @Original_RequestedBy)) AND ((@IsNull_ApprovedBy = 1 AND [ApprovedBy] IS NULL) OR ([ApprovedBy] = @Original_ApprovedBy)) AND ((@IsNull_RequistionDate = 1 AND [RequistionDate] IS NULL) OR ([RequistionDate] = @Original_RequistionDate)) AND ((@IsNull_CreatedBy = 1 AND [CreatedBy] IS NULL) OR ([CreatedBy] = @Original_CreatedBy)) AND ((@IsNull_UpdatedBy = 1 AND [UpdatedBy] IS NULL) OR ([UpdatedBy] = @Original_UpdatedBy)) AND ((@IsNull_Status = 1 AND [Status] IS NULL) OR ([Status] = @Original_Status)) AND ((@IsNull_Remarks = 1 AND [Remarks] IS NULL) OR ([Remarks] = @Original_Remarks)) AND ((@IsNull_RequestedFor = 1 AND [RequestedFor] IS NULL) OR ([RequestedFor] = @Original_RequestedFor)) AND ((@IsNull_Reference = 1 AND [Reference] IS NULL) OR ([Reference] = @Original_Reference)) AND ((@IsNull_StoreID = 1 AND [StoreID] IS NULL) OR ([StoreID] = @Original_StoreID)) AND ((@IsNull_RequisitionType = 1 AND [RequisitionType] IS NULL) OR ([RequisitionType] = @Original_RequisitionType)) AND ((@IsNull_FromStore = 1 AND [FromStore] IS NULL) OR ([FromStore] = @Original_FromStore)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@RequisitionNumber" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="RequisitionNumber" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@DepartmentId" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="DepartmentId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@RequestTo" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="RequestTo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@RequestedBy" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="RequestedBy" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@ApprovedBy" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="ApprovedBy" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@RequistionDate" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="RequistionDate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@CreatedBy" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="CreatedBy" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@UpdatedBy" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="UpdatedBy" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Status" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Status" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Remarks" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Remarks" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@RequestedFor" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="RequestedFor" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Reference" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Reference" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@StoreID" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="StoreID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@RequisitionType" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="RequisitionType" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@FromStore" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="FromStore" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_RequisitionNumber" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="RequisitionNumber" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DepartmentId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DepartmentId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Original_DepartmentId" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="DepartmentId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_RequestTo" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="RequestTo" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_RequestTo" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="RequestTo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_RequestedBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="RequestedBy" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Original_RequestedBy" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="RequestedBy" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ApprovedBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ApprovedBy" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Original_ApprovedBy" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="ApprovedBy" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_RequistionDate" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="RequistionDate" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_RequistionDate" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="RequistionDate" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_CreatedBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CreatedBy" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_CreatedBy" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="CreatedBy" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_UpdatedBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="UpdatedBy" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_UpdatedBy" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="UpdatedBy" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Status" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Status" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Status" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Status" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Remarks" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Remarks" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_Remarks" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Remarks" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_RequestedFor" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="RequestedFor" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_RequestedFor" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="RequestedFor" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Reference" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Reference" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Reference" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Reference" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_StoreID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="StoreID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_StoreID" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="StoreID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_RequisitionType" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="RequisitionType" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_RequisitionType" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="RequisitionType" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_FromStore" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="FromStore" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_FromStore" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="FromStore" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="RequisitionNumber" DataSetColumn="RequisitionNumber" />
+              <Mapping SourceColumn="DepartmentId" DataSetColumn="DepartmentId" />
+              <Mapping SourceColumn="RequestTo" DataSetColumn="RequestTo" />
+              <Mapping SourceColumn="RequestedBy" DataSetColumn="RequestedBy" />
+              <Mapping SourceColumn="ApprovedBy" DataSetColumn="ApprovedBy" />
+              <Mapping SourceColumn="RequistionDate" DataSetColumn="RequistionDate" />
+              <Mapping SourceColumn="CreatedBy" DataSetColumn="CreatedBy" />
+              <Mapping SourceColumn="UpdatedBy" DataSetColumn="UpdatedBy" />
+              <Mapping SourceColumn="Status" DataSetColumn="Status" />
+              <Mapping SourceColumn="Remarks" DataSetColumn="Remarks" />
+              <Mapping SourceColumn="RequestedFor" DataSetColumn="RequestedFor" />
+              <Mapping SourceColumn="Reference" DataSetColumn="Reference" />
+              <Mapping SourceColumn="StoreID" DataSetColumn="StoreID" />
+              <Mapping SourceColumn="RequisitionType" DataSetColumn="RequisitionType" />
+              <Mapping SourceColumn="FromStore" DataSetColumn="FromStore" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="StosaConnectionString (Settings)" DbObjectName="SysBab.dbo.ItemRequisition" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByNonIssuedLocalRequitions" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByNonIssuedLocalRequisitions" GeneratorSourceName="FillByNonIssuedLocalRequitions" GetMethodModifier="Public" GetMethodName="GetDataByNonIssuedLocalRequisitions" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByNonIssuedLocalRequisitions" UserSourceName="FillByNonIssuedLocalRequitions">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT ApprovedBy, CreatedBy, DepartmentId, FromStore, Reference, Remarks, RequestTo, RequestedBy, RequestedFor, RequisitionNumber, RequisitionType, RequistionDate, Status, StoreID, UpdatedBy FROM ItemRequisition WHERE (RequisitionType = 'ST') AND (StoreID = @StoreID) AND (RequisitionNumber IN (SELECT ItemRequisition_1.RequisitionNumber FROM ItemsIssued RIGHT OUTER JOIN ItemRequisition AS ItemRequisition_1 ON ItemsIssued.ReferenceNumber = ItemRequisition_1.RequisitionNumber WHERE (ItemsIssued.ReferenceNumber IS NULL))) ORDER BY RequistionDate DESC</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="StoreID" ColumnName="StoreID" DataSourceName="SysBab.dbo.ItemRequisition" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@StoreID" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="StoreID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="StosaConnectionString (Settings)" DbObjectName="SysBab.dbo.ItemRequisition" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByReferenceNumber" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByReferenceNumber" GeneratorSourceName="FillByReferenceNumber" GetMethodModifier="Public" GetMethodName="GetDataByReferenceNumber" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByReferenceNumber" UserSourceName="FillByReferenceNumber">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT ApprovedBy, CreatedBy, DepartmentId, FromStore, Reference, Remarks, RequestTo, RequestedBy, RequestedFor, RequisitionNumber, RequisitionType, RequistionDate, Status, StoreID, UpdatedBy FROM ItemRequisition WHERE (Reference = @Value)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="Value" ColumnName="Reference" DataSourceName="SysBab.dbo.ItemRequisition" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@Value" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="Reference" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="StosaConnectionString (Settings)" DbObjectName="SysBab.dbo.ItemRequisition" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByStore" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByStore" GeneratorSourceName="FillByStore" GetMethodModifier="Public" GetMethodName="GetDataByStore" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByStore" UserSourceName="FillByStore">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT ApprovedBy, CreatedBy, DepartmentId, FromStore, Reference, Remarks, RequestTo, RequestedBy, RequestedFor, RequisitionNumber, RequisitionType, RequistionDate, Status, StoreID, UpdatedBy FROM ItemRequisition WHERE (StoreID = @StoreID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="StoreID" ColumnName="StoreID" DataSourceName="SysBab.dbo.ItemRequisition" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@StoreID" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="StoreID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="StosaConnectionString (Settings)" DbObjectName="SysBab.dbo.ItemRequisition" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByStoreReqType" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByStoreReqType" GeneratorSourceName="FillByStoreReqType" GetMethodModifier="Public" GetMethodName="GetDataByStoreReqType" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByStoreReqType" UserSourceName="FillByStoreReqType">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT ApprovedBy, CreatedBy, DepartmentId, FromStore, Reference, Remarks, RequestTo, RequestedBy, RequestedFor, RequisitionNumber, RequisitionType, RequistionDate, Status, StoreID, UpdatedBy FROM ItemRequisition WHERE (StoreID = @StoreID) AND (RequisitionType = @ReqType)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="StoreID" ColumnName="StoreID" DataSourceName="SysBab.dbo.ItemRequisition" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@StoreID" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="StoreID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="ReqType" ColumnName="RequisitionType" DataSourceName="SysBab.dbo.ItemRequisition" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@ReqType" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="RequisitionType" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="StosaConnectionString (Settings)" DbObjectName="SysBab.dbo.ItemRequisition" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByTransferRequestStore" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByTransferRequestStore" GeneratorSourceName="FillByTransferRequestStore" GetMethodModifier="Public" GetMethodName="GetDataByTransferRequestStore" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByTransferRequestStore" UserSourceName="FillByTransferRequestStore">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT ApprovedBy, CreatedBy, DepartmentId, FromStore, Reference, Remarks, RequestTo, RequestedBy, RequestedFor, RequisitionNumber, RequisitionType, RequistionDate, Status, StoreID, UpdatedBy FROM ItemRequisition WHERE (RequisitionType = 'TR') AND (StoreID = @StoreID) OR (RequisitionType = 'TR') AND (FromStore = @StoreID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="StoreID" ColumnName="StoreID" DataSourceName="SysBab.dbo.ItemRequisition" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@StoreID" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="StoreID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="StosaConnectionString (Settings)" DbObjectName="SysBab.dbo.ItemRequisition" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByTrReqReceived" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByTrReqReceived" GeneratorSourceName="FillByTrReqReceived" GetMethodModifier="Public" GetMethodName="GetDataByTrReqReceived" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByTrReqReceived" UserSourceName="FillByTrReqReceived">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT ApprovedBy, CreatedBy, DepartmentId, FromStore, Reference, Remarks, RequestTo, RequestedBy, RequestedFor, RequisitionNumber, RequisitionType, RequistionDate, Status, StoreID, UpdatedBy FROM ItemRequisition WHERE (FromStore = @StoreID) AND (RequisitionType = 'TR') AND (StoreID &lt;&gt; @StoreID) AND (RequisitionNumber IN (SELECT ItemRequisition_1.RequisitionNumber FROM ItemRequisition AS ItemRequisition_1 LEFT OUTER JOIN StoreTransfer ON StoreTransfer.ReferenceNumber = ItemRequisition_1.RequisitionNumber WHERE (StoreTransfer.ReferenceNumber IS NULL))) ORDER BY RequistionDate DESC</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="StoreID" ColumnName="FromStore" DataSourceName="SysBab.dbo.ItemRequisition" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@StoreID" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="FromStore" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ItemRequisitionDetailsTableAdapter" GeneratorDataComponentClassName="ItemRequisitionDetailsTableAdapter" Name="ItemRequisitionDetails" UserDataComponentName="ItemRequisitionDetailsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="StosaConnectionString (Settings)" DbObjectName="SysBab.dbo.ItemRequisitionDetails" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [ItemRequisitionDetails] WHERE (([RequistionNumber] = @Original_RequistionNumber) AND ((@IsNull_RequestedQuantity = 1 AND [RequestedQuantity] IS NULL) OR ([RequestedQuantity] = @Original_RequestedQuantity)) AND ((@IsNull_Remariks = 1 AND [Remariks] IS NULL) OR ([Remariks] = @Original_Remariks)) AND ([ItemID] = @Original_ItemID))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_RequistionNumber" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="RequistionNumber" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_RequestedQuantity" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="RequestedQuantity" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_RequestedQuantity" Precision="10" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="RequestedQuantity" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Remariks" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Remariks" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Remariks" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Remariks" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_ItemID" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ItemID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [ItemRequisitionDetails] ([RequistionNumber], [RequestedQuantity], [Remariks], [ItemID]) VALUES (@RequistionNumber, @RequestedQuantity, @Remariks, @ItemID);
+SELECT RequistionNumber, RequestedQuantity, Remariks, ItemID FROM ItemRequisitionDetails WHERE (ItemID = @ItemID) AND (RequistionNumber = @RequistionNumber)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@RequistionNumber" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="RequistionNumber" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@RequestedQuantity" Precision="10" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="RequestedQuantity" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Remariks" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Remariks" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@ItemID" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ItemID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        RequistionNumber, RequestedQuantity, Remariks, ItemID
+FROM            ItemRequisitionDetails</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [ItemRequisitionDetails] SET [RequistionNumber] = @RequistionNumber, [RequestedQuantity] = @RequestedQuantity, [Remariks] = @Remariks, [ItemID] = @ItemID WHERE (([RequistionNumber] = @Original_RequistionNumber) AND ((@IsNull_RequestedQuantity = 1 AND [RequestedQuantity] IS NULL) OR ([RequestedQuantity] = @Original_RequestedQuantity)) AND ((@IsNull_Remariks = 1 AND [Remariks] IS NULL) OR ([Remariks] = @Original_Remariks)) AND ([ItemID] = @Original_ItemID));
+SELECT RequistionNumber, RequestedQuantity, Remariks, ItemID FROM ItemRequisitionDetails WHERE (ItemID = @ItemID) AND (RequistionNumber = @RequistionNumber)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@RequistionNumber" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="RequistionNumber" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@RequestedQuantity" Precision="10" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="RequestedQuantity" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Remariks" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Remariks" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@ItemID" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ItemID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_RequistionNumber" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="RequistionNumber" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_RequestedQuantity" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="RequestedQuantity" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_RequestedQuantity" Precision="10" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="RequestedQuantity" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Remariks" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Remariks" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Remariks" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Remariks" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_ItemID" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ItemID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="RequistionNumber" DataSetColumn="RequistionNumber" />
+              <Mapping SourceColumn="RequestedQuantity" DataSetColumn="RequestedQuantity" />
+              <Mapping SourceColumn="Remariks" DataSetColumn="Remariks" />
+              <Mapping SourceColumn="ItemID" DataSetColumn="ItemID" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="BelayAbItemRequistions" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="BelayAbItemRequistions" msprop:Generator_UserDSName="BelayAbItemRequistions">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DepartmentLst" msprop:Generator_UserTableName="DepartmentLst" msprop:Generator_RowEvArgName="DepartmentLstRowChangeEvent" msprop:Generator_TableVarName="tableDepartmentLst" msprop:Generator_TablePropName="DepartmentLst" msprop:Generator_RowDeletingName="DepartmentLstRowDeleting" msprop:Generator_RowChangingName="DepartmentLstRowChanging" msprop:Generator_RowDeletedName="DepartmentLstRowDeleted" msprop:Generator_RowEvHandlerName="DepartmentLstRowChangeEventHandler" msprop:Generator_TableClassName="DepartmentLstDataTable" msprop:Generator_RowChangedName="DepartmentLstRowChanged" msprop:Generator_RowClassName="DepartmentLstRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DepartmentId" msprop:Generator_ColumnVarNameInTable="columnDepartmentId" msprop:Generator_ColumnPropNameInRow="DepartmentId" msprop:Generator_ColumnPropNameInTable="DepartmentIdColumn" msprop:Generator_UserColumnName="DepartmentId">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DepartmentName" msprop:Generator_ColumnVarNameInTable="columnDepartmentName" msprop:Generator_ColumnPropNameInRow="DepartmentName" msprop:Generator_ColumnPropNameInTable="DepartmentNameColumn" msprop:Generator_UserColumnName="DepartmentName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="EmployeesLst" msprop:Generator_UserTableName="EmployeesLst" msprop:Generator_RowEvArgName="EmployeesLstRowChangeEvent" msprop:Generator_TableVarName="tableEmployeesLst" msprop:Generator_TablePropName="EmployeesLst" msprop:Generator_RowDeletingName="EmployeesLstRowDeleting" msprop:Generator_RowChangingName="EmployeesLstRowChanging" msprop:Generator_RowDeletedName="EmployeesLstRowDeleted" msprop:Generator_RowEvHandlerName="EmployeesLstRowChangeEventHandler" msprop:Generator_TableClassName="EmployeesLstDataTable" msprop:Generator_RowChangedName="EmployeesLstRowChanged" msprop:Generator_RowClassName="EmployeesLstRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="EmployeeId" msprop:Generator_ColumnVarNameInTable="columnEmployeeId" msprop:Generator_ColumnPropNameInRow="EmployeeId" msprop:Generator_ColumnPropNameInTable="EmployeeIdColumn" msprop:Generator_UserColumnName="EmployeeId">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DepartmentId" msprop:Generator_ColumnVarNameInTable="columnDepartmentId" msprop:Generator_ColumnPropNameInRow="DepartmentId" msprop:Generator_ColumnPropNameInTable="DepartmentIdColumn" msprop:Generator_UserColumnName="DepartmentId" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EmployeeName" msprop:Generator_ColumnVarNameInTable="columnEmployeeName" msprop:Generator_ColumnPropNameInRow="EmployeeName" msprop:Generator_ColumnPropNameInTable="EmployeeNameColumn" msprop:Generator_UserColumnName="EmployeeName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ItemRequisition" msprop:Generator_UserTableName="ItemRequisition" msprop:Generator_RowEvArgName="ItemRequisitionRowChangeEvent" msprop:Generator_TableVarName="tableItemRequisition" msprop:Generator_TablePropName="ItemRequisition" msprop:Generator_RowDeletingName="ItemRequisitionRowDeleting" msprop:Generator_RowChangingName="ItemRequisitionRowChanging" msprop:Generator_RowDeletedName="ItemRequisitionRowDeleted" msprop:Generator_RowEvHandlerName="ItemRequisitionRowChangeEventHandler" msprop:Generator_TableClassName="ItemRequisitionDataTable" msprop:Generator_RowChangedName="ItemRequisitionRowChanged" msprop:Generator_RowClassName="ItemRequisitionRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="RequisitionNumber" msprop:nullValue="_throw" msprop:Generator_ColumnPropNameInRow="RequisitionNumber" msprop:Generator_ColumnVarNameInTable="columnRequisitionNumber" msprop:Generator_ColumnPropNameInTable="RequisitionNumberColumn" msprop:Generator_UserColumnName="RequisitionNumber">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DepartmentId" msprop:Generator_ColumnVarNameInTable="columnDepartmentId" msprop:Generator_ColumnPropNameInRow="DepartmentId" msprop:Generator_ColumnPropNameInTable="DepartmentIdColumn" msprop:Generator_UserColumnName="DepartmentId" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RequestTo" msprop:Generator_ColumnVarNameInTable="columnRequestTo" msprop:Generator_ColumnPropNameInRow="RequestTo" msprop:Generator_ColumnPropNameInTable="RequestToColumn" msprop:Generator_UserColumnName="RequestTo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RequestedBy" msprop:Generator_ColumnVarNameInTable="columnRequestedBy" msprop:Generator_ColumnPropNameInRow="RequestedBy" msprop:Generator_ColumnPropNameInTable="RequestedByColumn" msprop:Generator_UserColumnName="RequestedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ApprovedBy" msprop:Generator_ColumnVarNameInTable="columnApprovedBy" msprop:Generator_ColumnPropNameInRow="ApprovedBy" msprop:Generator_ColumnPropNameInTable="ApprovedByColumn" msprop:Generator_UserColumnName="ApprovedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RequistionDate" msprop:Generator_ColumnVarNameInTable="columnRequistionDate" msprop:Generator_ColumnPropNameInRow="RequistionDate" msprop:Generator_ColumnPropNameInTable="RequistionDateColumn" msprop:Generator_UserColumnName="RequistionDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CreatedBy" msprop:Generator_ColumnVarNameInTable="columnCreatedBy" msprop:Generator_ColumnPropNameInRow="CreatedBy" msprop:Generator_ColumnPropNameInTable="CreatedByColumn" msprop:Generator_UserColumnName="CreatedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UpdatedBy" msprop:Generator_ColumnVarNameInTable="columnUpdatedBy" msprop:Generator_ColumnPropNameInRow="UpdatedBy" msprop:Generator_ColumnPropNameInTable="UpdatedByColumn" msprop:Generator_UserColumnName="UpdatedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Status" msprop:Generator_ColumnVarNameInTable="columnStatus" msprop:Generator_ColumnPropNameInRow="Status" msprop:Generator_ColumnPropNameInTable="StatusColumn" msprop:Generator_UserColumnName="Status" default="New" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Remarks" msprop:Generator_ColumnVarNameInTable="columnRemarks" msprop:Generator_ColumnPropNameInRow="Remarks" msprop:Generator_ColumnPropNameInTable="RemarksColumn" msprop:Generator_UserColumnName="Remarks" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RequestedFor" msprop:Generator_ColumnVarNameInTable="columnRequestedFor" msprop:Generator_ColumnPropNameInRow="RequestedFor" msprop:Generator_ColumnPropNameInTable="RequestedForColumn" msprop:Generator_UserColumnName="RequestedFor" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Reference" msprop:Generator_ColumnVarNameInTable="columnReference" msprop:Generator_ColumnPropNameInRow="Reference" msprop:Generator_ColumnPropNameInTable="ReferenceColumn" msprop:Generator_UserColumnName="Reference" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StoreID" msprop:Generator_ColumnVarNameInTable="columnStoreID" msprop:Generator_ColumnPropNameInRow="StoreID" msprop:Generator_ColumnPropNameInTable="StoreIDColumn" msprop:Generator_UserColumnName="StoreID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RequisitionType" msprop:Generator_ColumnVarNameInTable="columnRequisitionType" msprop:Generator_ColumnPropNameInRow="RequisitionType" msprop:Generator_ColumnPropNameInTable="RequisitionTypeColumn" msprop:Generator_UserColumnName="RequisitionType" default="ST" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FromStore" msprop:Generator_ColumnVarNameInTable="columnFromStore" msprop:Generator_ColumnPropNameInRow="FromStore" msprop:Generator_ColumnPropNameInTable="FromStoreColumn" msprop:Generator_UserColumnName="FromStore" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ItemRequisitionDetails" msprop:Generator_UserTableName="ItemRequisitionDetails" msprop:Generator_RowEvArgName="ItemRequisitionDetailsRowChangeEvent" msprop:Generator_TableVarName="tableItemRequisitionDetails" msprop:Generator_TablePropName="ItemRequisitionDetails" msprop:Generator_RowDeletingName="ItemRequisitionDetailsRowDeleting" msprop:Generator_RowChangingName="ItemRequisitionDetailsRowChanging" msprop:Generator_RowDeletedName="ItemRequisitionDetailsRowDeleted" msprop:Generator_RowEvHandlerName="ItemRequisitionDetailsRowChangeEventHandler" msprop:Generator_TableClassName="ItemRequisitionDetailsDataTable" msprop:Generator_RowChangedName="ItemRequisitionDetailsRowChanged" msprop:Generator_RowClassName="ItemRequisitionDetailsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="RequistionNumber" msprop:Generator_ColumnVarNameInTable="columnRequistionNumber" msprop:Generator_ColumnPropNameInRow="RequistionNumber" msprop:Generator_ColumnPropNameInTable="RequistionNumberColumn" msprop:Generator_UserColumnName="RequistionNumber">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RequestedQuantity" msprop:Generator_ColumnVarNameInTable="columnRequestedQuantity" msprop:Generator_ColumnPropNameInRow="RequestedQuantity" msprop:Generator_ColumnPropNameInTable="RequestedQuantityColumn" msprop:Generator_UserColumnName="RequestedQuantity" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Remariks" msprop:Generator_ColumnVarNameInTable="columnRemariks" msprop:Generator_ColumnPropNameInRow="Remariks" msprop:Generator_ColumnPropNameInTable="RemariksColumn" msprop:Generator_UserColumnName="Remariks" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="300" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ItemID" msprop:Generator_ColumnVarNameInTable="columnItemID" msprop:Generator_ColumnPropNameInRow="ItemID" msprop:Generator_ColumnPropNameInTable="ItemIDColumn" msprop:Generator_UserColumnName="ItemID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DepartmentLst" />
+      <xs:field xpath="mstns:DepartmentId" />
+    </xs:unique>
+    <xs:unique name="EmployeesLst_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:EmployeesLst" />
+      <xs:field xpath="mstns:EmployeeId" />
+    </xs:unique>
+    <xs:unique name="ItemRequisition_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ItemRequisition" />
+      <xs:field xpath="mstns:RequisitionNumber" />
+    </xs:unique>
+    <xs:unique name="ItemRequisitionDetails_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ItemRequisitionDetails" />
+      <xs:field xpath="mstns:RequistionNumber" />
+      <xs:field xpath="mstns:ItemID" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="FK_ItemRequisionDetails_ItemRequisition" msdata:parent="ItemRequisition" msdata:child="ItemRequisitionDetails" msdata:parentkey="RequisitionNumber" msdata:childkey="RequistionNumber" msprop:Generator_UserChildTable="ItemRequisitionDetails" msprop:Generator_ChildPropName="GetItemRequisitionDetailsRows" msprop:Generator_UserRelationName="FK_ItemRequisionDetails_ItemRequisition" msprop:Generator_RelationVarName="relationFK_ItemRequisionDetails_ItemRequisition" msprop:Generator_UserParentTable="ItemRequisition" msprop:Generator_ParentPropName="ItemRequisitionRow" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

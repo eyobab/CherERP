@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DBInfos>
+  <Server Name="." 
+    Loc="MBS1">
+  </Server>
+</DBInfos>
+
+<!--
+
+<?xml version="1.0" encoding="utf-8"?>
+<DBInfos>
+  <Server Name=".\SQL08" 
+    Loc="MBS1">
+  </Server>
+</DBInfos>
+
+-->

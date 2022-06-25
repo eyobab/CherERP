@@ -1,0 +1,10 @@
+D:\BAB\GridPrintPreviewSolution\GridLib\bin\Debug\GridLib.dll
+D:\BAB\GridPrintPreviewSolution\GridLib\bin\Debug\GridLib.pdb
+D:\BAB\GridPrintPreviewSolution\GridLib\obj\Debug\GridLib.dll
+D:\BAB\GridPrintPreviewSolution\GridLib\obj\Debug\GridLib.pdb
+D:\BAB\GridPrintPreviewSolution\GridLib\obj\Debug\GridPrintPreviewLib.csprojResolveAssemblyReference.cache
+D:\BAB\STM_2017_15\GridLib\bin\Debug\GridLib.dll
+D:\BAB\STM_2017_15\GridLib\bin\Debug\GridLib.pdb
+D:\BAB\STM_2017_15\GridLib\obj\Debug\GridPrintPreviewLib.csprojResolveAssemblyReference.cache
+D:\BAB\STM_2017_15\GridLib\obj\Debug\GridLib.dll
+D:\BAB\STM_2017_15\GridLib\obj\Debug\GridLib.pdb
